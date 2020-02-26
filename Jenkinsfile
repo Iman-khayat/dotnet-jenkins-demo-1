@@ -35,7 +35,7 @@ stage('Build') {
             unstash 'source'
             dir('src\\dotnet-jenkins-demo'){
                 script{
-                    bat '"C:\\Program Files\\dotnet\\dotnet.exe" publish -c release -o /app --no-restore' 
+                    bat '"C:\\Program Files\\dotnet\\dotnet.exe" publish -c release -o "src\\dotnet-jenkins-demo\\app" --no-restore' 
                 }
             }
       }
